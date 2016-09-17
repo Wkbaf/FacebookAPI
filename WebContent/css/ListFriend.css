@@ -1,0 +1,225 @@
+.color{
+	color:blue;
+}
+
+/* css for back ground */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+}
+
+body , html{
+   /*important */
+  height: 100%;
+  width: 100%;
+  margin-left: 0;
+}
+.fixed-bg {
+  position: relative;
+  top: 0%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  background-attachment: fixed;/*Note*/
+}
+.fixed-bg.bg-1 {
+  background-image: url("#");
+}
+.fixed-bg.bg-2 {
+  background-image: url("#");
+/*   background-color: darkslategrey; */
+}
+.fixed-bg.bg-3 {
+  background-image: url("#");
+}
+.fixed-bg.bg-4 {
+  background-image: url("#");
+/*   background-color: darkslategrey; */
+}
+/* css for content */
+.contain-frame{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+/* Frame in opacity background */
+.frame {
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+}
+.frame img{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.frame.sub-framefb{
+  width: 8%;
+  height: 14%;
+  border: none;
+  position: absolute;
+  top: 73%;
+  left: 30%;
+  cursor: pointer;
+}
+/* Phan trang cho bang */
+.pg-normal {
+    display: inline-block;
+    padding: 0px 9px;
+    margin-right: 4px;
+    border-radius: 3px;
+    border: solid 1px #c0c0c0;
+    background: #e9e9e9;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255, .8), 0px 1px 3px rgba(0,0,0, .1);
+    font-size: .875em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #717171;
+    text-shadow: 0px 1px 0px rgba(255,255,255, 1); 
+    cursor: pointer;
+}
+
+.pg-normal:hover {
+	background: #fefefe;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FEFEFE), to(#f0f0f0));
+    background: -moz-linear-gradient(0% 0% 270deg,#FEFEFE, #f0f0f0);
+}
+
+.pg-selected {
+    border: none;
+    background: #616161;
+    box-shadow: inset 0px 0px 8px rgba(0,0,0, .5), 0px 1px 0px rgba(255,255,255, .8);
+    color: #f0f0f0;
+    text-shadow: 0px 0px 3px rgba(0,0,0, .5);
+}
+
+/* Css for table list friend */
+thead > tr, tbody{
+    display:block;
+}
+#margin-tbl-listfriend{
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	z-index: 2;
+}
+#tbl-listfriend{
+	margin: 0 auto;
+	border-collapse: collapse;
+    width: 70%;
+/*  height: 400px; */
+ 	overflow: auto;
+	color: black;
+	z-index: 4;
+}
+#tbl-listfriend tbody{
+ 	background-color: white;
+    height: 455px;
+    overflow: scroll;
+    width: 100%;
+}
+#tbl-listfriend th:FIRST-CHILD{
+	padding: 3px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #4CAF50;
+    color: white;
+    width: 2%;
+}
+#tbl-listfriend th{
+	padding: 3px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #4CAF50;
+    color: white;
+}
+#tbl-listfriend td:FIRST-CHILD{
+	 padding: 3px 15px;
+     width:60px;
+     width: 2%;
+}
+#tbl-listfriend td:AFTER{
+	 padding: 3px 15px;
+     width:60px;
+     width: 10%;
+}
+
+#tbl-listfriend tr:hover{background-color: NavajoWhite}
+#tbl-listfriend tr:nth-child(even):hover{
+	background-color:SandyBrown;
+}
+
+#tbl-listfriend tr:nth-child(even){
+	background-color: BurlyWood;
+}
+
+/* csss for table list friend all */
+#margin-tbl-listfriend-all{
+	position: absolute;
+	top: 100%;
+	left: 0%;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+}
+#tbl-listfriend-all{
+	margin: 0 auto;
+	border-collapse: collapse;
+    width: 80%;
+    overflow: auto;
+	color: black;
+}
+#tbl-listfriend-all tbody{
+ 	background-color: white;
+    min-height: 50px;
+    overflow: scroll;
+    width: 100%;
+}
+#tbl-listfriend-all th:FIRST-CHILD{
+	padding: 3px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #4CAF50;
+    color: white;
+    width: 2%;
+}
+#tbl-listfriend-all th{
+	padding: 3px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #4CAF50;
+    color: white;
+}
+#tbl-listfriend-all td:FIRST-CHILD{
+	 padding: 3px 15px;
+     width:60px;
+     width: 2%;
+}
+#tbl-listfriend-all td:AFTER{
+	 padding: 3px 15px;
+     width:60px;
+     width: 20%;
+}
+
+#tbl-listfriend-all tr:hover{background-color: NavajoWhite}
+#tbl-listfriend-all tr:nth-child(even):hover{
+	background-color:SandyBrown;
+}
+
+#tbl-listfriend-all tr:nth-child(even){
+	background-color: BurlyWood;
+}
