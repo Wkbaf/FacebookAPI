@@ -69,24 +69,28 @@
 	 	
 	 	<div class="fixed-bg bg-5"></div>
 	 	
+	 	<div class="fixed-bg bg-6"><a href="policy.html">Policy</a></div>
+	 	
 	 	<div class="opacityBG"></div>
 		
 		<div class="contain-frame">
 		
 		<!-- MENU -->
-			<div class="menu-nav">
-	            <div id="wrapper">
-	                 <div class="nav">
-	                     <ul>
-	                         <li class="active"><a href="" id="a1"><span class="glyphicon glyphicon-home"></span ><span class="nav-text">Home</span> </a></li>
-	                         <li><a href="#service" id="a2"><span class="glyphicon glyphicon-play-circle"></span><span class="nav-text">Service</span></a></li>
-	                         <li><a href="#about" id="a3"><span class="glyphicon glyphicon-th-large"></span><span class="nav-text">About</span></a></li>
-	                         <li><a href="#" id="a4"><span class="glyphicon glyphicon-book"></span><span class="nav-text">How to use</span></a></li>
+<!-- 			<div class="menu-nav"> -->
+<!-- 	            <div id="wrapper"> -->
+<!-- 	                 <div class="nav"> -->
+<!-- 	                     <ul> -->
+<!-- 	                         <li class="active"><a href="" id="a1"><span class="glyphicon glyphicon-home"></span ><span class="nav-text">Home</span> </a></li> -->
+<!-- 	                         <li><a href="#service" id="a2"><span class="glyphicon glyphicon-play-circle"></span><span class="nav-text">Service</span></a></li> -->
+<!-- 	                         <li><a href="#about" id="a3"><span class="glyphicon glyphicon-th-large"></span><span class="nav-text">About</span></a></li> -->
+<!-- 	                         <li><a href="#" id="a4"><span class="glyphicon glyphicon-book"></span><span class="nav-text">How to use</span></a></li> -->
 <!-- 	                         <li><a href="#" class="fb" id="btb" onclick="RequestLoginFB()" style="display:none"><img alt="facebookimg" src="image/fb.png"></a></li> -->
-	                     </ul>
-	                 </div>  
-	            </div>
-        	</div>
+<!-- 	                     </ul> -->
+<!-- 	                 </div>   -->
+<!-- 	            </div> -->
+<!--         	</div> -->
+
+		
         	
 		<!-- Frame in opacityBG -->
 			<div class="frame">
@@ -96,7 +100,10 @@
 <!-- 					<h1>Forever your<span class="span1">Friend</span></h1> -->
 <!-- 				</div> -->
 				<img  id="cockpit" alt="cockpit" src="image/cockpit2.gif" >
-				<span ids="span-cockpit" class="frame sub-framefb" onclick="RequestLoginFB()"></span>
+				<span id="span-cockpit" class="frame sub-framefb" onclick="RequestLoginFB()"></span>
+	 			<span class="frame sub-frameser" onclick="location='#service'"></span>
+	 			<span class="frame sub-framecont" ></span>
+	 			<span class="frame sub-frameabout" ></span>
 	 		</div>
 	 	
 			<div class="contain-bg2">

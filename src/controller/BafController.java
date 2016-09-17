@@ -27,6 +27,14 @@ public class BafController {
 		return model;
 	}
 	
+	@RequestMapping(value="policy", method=RequestMethod.GET)
+	public ModelAndView Policy(){
+		
+		ModelAndView model = new ModelAndView("policy");
+		
+		return model;
+	}
+	
 	@RequestMapping(value="test", method=RequestMethod.GET)
 	public ModelAndView test(){
 		

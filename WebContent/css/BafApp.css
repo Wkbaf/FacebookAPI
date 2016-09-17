@@ -81,6 +81,9 @@ body , html{
 }
 .fixed-bg.bg-5 {
   background-image: url("../image/bg2.jpg");
+}
+.fixed-bg.bg-6 {
+  background-image: url("../image/popup1.jpg");
 } 
 /* animate cube for background */
  @-webkit-keyframes spincube {
@@ -167,7 +170,7 @@ body , html{
     transform: rotateY(90deg) translateZ(60px);
   }
   
-/* background opacity */
+/* background opacity for homepage */
 div.opacityBG{
   position: absolute;
   top: 0;left: 0;
@@ -178,7 +181,7 @@ div.opacityBG{
 /*   background-color: darkslategrey; */
 }
 
-/* Frame in opacity background */
+/* Frame in home background */
 .frame {
 /*   width: 90%; */
 /*   height: 80%; */
@@ -213,6 +216,36 @@ div.opacityBG{
   position: absolute;
   top: 73%;
   left: 30%;
+  cursor: pointer;
+}
+.frame.sub-frameser{
+  width: 9%;
+  height: 4%;
+  border: none;
+  position: absolute;
+  top: 0.5%;
+  left: 38%;
+  background: none;
+  cursor: pointer;
+}
+.frame.sub-framecont{
+  width: 8.5%;
+  height: 4%;
+  border: none;
+  position: absolute;
+  top: 1%;
+  left: 52%;
+  background: none;
+  cursor: pointer;
+}
+.frame.sub-frameabout{
+  width: 8.5%;
+  height: 4%;
+  border: none;
+  position: absolute;
+  top: 0.9%;
+  left: 64.2%;
+  background: none;
   cursor: pointer;
 }
 @keyframes blink {
