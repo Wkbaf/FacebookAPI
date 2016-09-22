@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="js/Javascript-SDK.js"></script>
 <!-- 	<script type="text/javascript" src="js/Javascript-Inter.js"></script> -->
 	<link rel="stylesheet" type="text/css" href="css/ListFriend.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 </head>
 <body >
 
@@ -28,7 +29,7 @@
 		// [1] Load các thành phần cần thiết
 	 	window.fbAsyncInit = function() {
 		  FB.init({
-		    appId      : '1096288800465833',
+		    appId      : '1400043393356379',
 		    cookie     : true,   
 		    xfbml      : true,  
 		    version    : 'v2.1' 
@@ -60,55 +61,70 @@
 <!-- 	CODE PAGE -->
 
 <!-- 	Script for background -->
-	<div class="fixed-bg bg-1"></div>
+
+		<div class="background">
+			<div class="main-frame">
+				
+				<!-- table of friend all -->
+				<div id="margin-tbl-listfriend">
+					<table id="tbl-listfriend">
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>NAME</th>
+								<th>ID</th>
+								<th>GENDER</th>
+								<th>BIRTHDAY</th>
+								<th>LOCATION</th>
+							</tr>
+						</thead>
+						<tbody id="tableBody">
+						</tbody>
+					</table>
+				</div>
 		
- 	<div class="fixed-bg bg-2"></div>
- 	
- 	<div class="fixed-bg bg-3"></div>
- 	
- 	<div class="fixed-bg bg-4"></div>
- 	
- 	<div class="fixed-bg bg-5"></div>
-	 
-<!-- 	 <div class="contain-frame"> -->
-<!-- 	 	<div class="frame"> -->
-<!-- 			<img  id="frame-tv" alt="frame-tv" src="image/frametv1.png" > -->
-<!-- 		</div> -->
-<!-- 	 </div> -->
-	 	
+				<!-- table of friend with all infor -->
+				<div id="margin-tbl-listfriend-all">
+					<table id="tbl-listfriend-all">
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>NAME</th>
+								<th>ID</th>
+								<th>GENDER</th>
+								<th>BIRTHDAY</th>
+								<th>LOCATION</th>
+							</tr>
+						</thead>
+						<tbody id="tableBody-all">
+						</tbody>
+					</table>
+				</div>
+		
+			</div>
+		</div>
+			 	
 <!-- 	 Script for content -->
-		<div id="margin-tbl-listfriend">
-		<table id="tbl-listfriend">
-			<thead>
-				<tr>
-					<th>No.</th>
-					<th>NAME</th>
-					<th>ID</th>
-					<th>GENDER</th>
-					<th>BIRTHDAY</th>
-					<th>LOCATION</th>
-				</tr>
-			</thead>
-			<tbody id="tableBody">
-			</tbody>
-		</table>
+
+<!-- search friends -->
+		<div id="container">
+			<div class="row">
+		        <div class="col-sm-6 col-sm-offset-3">
+		                <div class="input-group stylish-input-group">
+		                    <input type="text" class="form-control"  placeholder="Search" >
+		                    <span class="input-group-addon">
+		                        <button type="submit">
+		                            <span class="glyphicon glyphicon-search"></span>
+		                        </button>  
+		                    </span>
+		                </div>
+		        </div>
+			</div>
 		</div>
-		<div id="margin-tbl-listfriend-all">
-			<table id="tbl-listfriend-all">
-				<thead>
-					<tr>
-						<th>No.</th>
-						<th>NAME</th>
-						<th>ID</th>
-						<th>GENDER</th>
-						<th>BIRTHDAY</th>
-						<th>LOCATION</th>
-					</tr>
-				</thead>
-				<tbody id="tableBody-all">
-				</tbody>
-			</table>
-		</div>
+	
+
+		
+
 	
 	
 	<button id="goHome">Go Home</button>

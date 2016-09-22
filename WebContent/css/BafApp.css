@@ -47,7 +47,7 @@ body , html{
 }
 .fixed-bg {
   position: relative;
-  top: 0%;
+  top: -1%;
   height: 100%;
   background-size: cover;
   z-index: -1;
@@ -83,7 +83,8 @@ body , html{
   background-image: url("../image/bg2.jpg");
 }
 .fixed-bg.bg-6 {
-  background-image: url("../image/popup1.jpg");
+  background-image: url("#");
+  background-color: darkslategrey;
 } 
 /* animate cube for background */
  @-webkit-keyframes spincube {
@@ -330,8 +331,8 @@ div.opacityBG{
 /* CONTAIN */
 .contain-bg2{
 	position: relative;
-	top: 10%;
 	width: 100%;
+	height: 100%;
 }
 .contain-bg2 h1{
 	color: white;
@@ -339,8 +340,50 @@ div.opacityBG{
 	font-size: 48px;
 	text-align: center;
 }
-
-
+.contain-bg3{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.contain-bg3 h1{
+	color: white;
+	font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif;
+	font-size: 48px;
+	text-align: center;
+}
+.contain-bg4{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.contain-bg4 h1{
+	color: white;
+	font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif;
+	font-size: 48px;
+	text-align: center;
+}
+.contain-bg5{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.contain-bg5 h1{
+	color: white;
+	font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif;
+	font-size: 48px;
+	text-align: center;
+}
+.contain-footer{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.contain-footer h1{
+	color: white;
+	font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif;
+	font-size: 48px;
+	text-align: center;
+}
 /* CONTENT */
 .content-bg2{
 	width: 90%;

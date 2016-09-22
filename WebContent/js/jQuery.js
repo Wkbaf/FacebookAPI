@@ -96,3 +96,16 @@ $(function(){
 });
 
 //jQuery for friend list
+$(document).ready(function(){
+	//Write on keyup event of keyword input element
+	$(".form-control").keyup(function(){
+	    _this = this;
+	    // Show only matching TR, hide rest of them
+	    $.each($("#tbl-listfriend tbody tr"), function() {
+	        if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+	           $(this).hide();
+	        else
+	           $(this).show();                
+	    });
+	});
+});

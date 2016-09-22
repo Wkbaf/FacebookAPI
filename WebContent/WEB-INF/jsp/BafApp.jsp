@@ -33,7 +33,7 @@
 		// [1] Load các thành phần cần thiết
 	 	window.fbAsyncInit = function() {
 		  FB.init({
-		    appId      : '1096288800465833',
+		    appId      : '1400043393356379',
 		    cookie     : true,   
 		                        
 		    xfbml      : true,  
@@ -69,7 +69,7 @@
 	 	
 	 	<div class="fixed-bg bg-5"></div>
 	 	
-	 	<div class="fixed-bg bg-6"><a href="policy.html">Policy</a></div>
+	 	<div class="fixed-bg bg-6"></div>
 	 	
 	 	<div class="opacityBG"></div>
 		
@@ -134,6 +134,27 @@
 						</div>
 						<h1>Geography</h1>
 					</div>
+				</div>
+			</div>
+			
+			<div class="contain-bg3">
+				<h1>BapApp</h1>
+			</div>
+			
+			<div class="contain-bg4">
+				<h1>BapApp</h1>
+			</div>
+			
+			<div class="contain-bg5">
+				<h1>BapApp</h1>
+			</div>
+			
+			<div class="contain-footer">
+				<h1>ABOUT</h1>
+				
+				<div class="content-footer">
+					<a href="policy.html">Policy</a>
+					<a href="service.html">Service</a>
 				</div>
 			</div>
 		</div>

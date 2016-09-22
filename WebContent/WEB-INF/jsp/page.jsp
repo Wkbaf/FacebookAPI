@@ -46,6 +46,26 @@
 			</tbody>
 		</table>
 	</div>
+	
+	
+<!-- 	table for get list friend all infor -->
+	<div>
+		<table id="tbl-mutalfriend">
+			<thead>
+				<tr>
+					<th>No.</th>
+					<th>NAME</th>
+					<th>GENDER</th>
+					<th>BIRTHDAY</th>
+					<th>ID</th>
+					<th>LOCATION</th>
+				</tr>
+			</thead>
+			<tbody id="tableBody-all">
+			</tbody>
+		</table>
+	</div>
+
 	<div id="pageNavPosition"></div>
 
 

@@ -21,29 +21,28 @@ body , html{
    /*important */
   height: 100%;
   width: 100%;
-  margin-left: 0;
+  background-color: tan;
+  z-index: -6;
+  background-attachment: fixed;
 }
-.fixed-bg {
-  position: relative;
-  top: 0%;
-  height: 100%;
-  background-size: cover;
-  z-index: -1;
-  background-attachment: fixed;/*Note*/
+.background{
+	 background-image: url("../image/Friendlist/bg6.jpg");
+	 width: 100%;
+	 height: 100%;
+	 background-size: cover;
+	 background-attachment: fixed;
+	 position: absolute;
+	 top: 0;
+	 z-index: 1;/* 	 note */
+	 border-radius: 0 0 20px 20px;/* top left, top right, bottom right, bottom left */
 }
-.fixed-bg.bg-1 {
-  background-image: url("#");
-}
-.fixed-bg.bg-2 {
-  background-image: url("#");
-/*   background-color: darkslategrey; */
-}
-.fixed-bg.bg-3 {
-  background-image: url("#");
-}
-.fixed-bg.bg-4 {
-  background-image: url("#");
-/*   background-color: darkslategrey; */
+.main-frame{
+	margin: 35% auto;
+	background-color: white;
+	width: 98%;
+	min-height: 100%;
+	border-radius: 7px 7px 0 0;
+	z-index: 1;
 }
 /* css for content */
 .contain-frame{
@@ -112,9 +111,9 @@ thead > tr, tbody{
     display:block;
 }
 #margin-tbl-listfriend{
-	position: absolute;
-	top: 10%;
-	left: 20%;
+	position: relative;
+	top: 5%;
+	left: 0%;
 	z-index: 2;
 }
 #tbl-listfriend{
@@ -169,8 +168,8 @@ thead > tr, tbody{
 
 /* csss for table list friend all */
 #margin-tbl-listfriend-all{
-	position: absolute;
-	top: 100%;
+	position: relative;
+	top: 10%;
 	left: 0%;
 	z-index: 2;
 	width: 100%;
@@ -222,4 +221,23 @@ thead > tr, tbody{
 
 #tbl-listfriend-all tr:nth-child(even){
 	background-color: BurlyWood;
+}
+
+/* css for search table friends */
+#container{
+    position: absolute;
+    top: 0;
+   
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
 }

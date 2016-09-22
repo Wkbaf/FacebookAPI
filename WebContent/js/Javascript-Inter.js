@@ -125,6 +125,44 @@
 		 		};
 		  }
 		  
+		  
+		  
+		  function showFriendAPI(){
+			  var numRows = 0;
+			  
+			  FB.api(
+					  '/me/friends',
+					  'GET',
+					  {"fields":"name,gender,birthday,id,location","pretty":"0","limit":"5000"},
+					  function(response) {
+					     if(!response || response.error){
+					    	 alert ("loi");
+					     }else{
+					    	 for (var i in response.data)
+					    	 {
+							// 		JQuery			     		
+									var newRow = $('<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>');
+						            var cols = newRow.children();
+						            cols.eq(0).text(numRows);
+						            cols.eq(1).text(response.data[i].name);
+						            cols.eq(2).text(response.data[i].id);
+						            cols.eq(3).text(response.data[i].gender);
+						            cols.eq(4).text(response.data[i].birthday);
+						            cols.eq(5).text(response.data[i].location.name);
+						            newRow.appendTo('#tableBody-all');
+						            numRows++;
+						            
+					    	 }
+					    }
+					  }
+					  
+					  
+					);
+			 
+		}
+		  
+		  
+		  
 		  this.showRecords = function(from, to) {
 	  	        var rows = document.getElementById(tableName).rows;
 	  	        // i starts from 1 to skip table header row
@@ -226,6 +264,8 @@
 					  );
 				 
 				});
+			 
+			 
 	 		};
 		});
 	  

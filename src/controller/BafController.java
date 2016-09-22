@@ -35,6 +35,14 @@ public class BafController {
 		return model;
 	}
 	
+	@RequestMapping(value="service", method=RequestMethod.GET)
+	public ModelAndView Service(){
+		
+		ModelAndView model = new ModelAndView("service");
+		
+		return model;
+	}
+	
 	@RequestMapping(value="test", method=RequestMethod.GET)
 	public ModelAndView test(){
 		
