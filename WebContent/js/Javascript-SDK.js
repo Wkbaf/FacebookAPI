@@ -57,36 +57,273 @@
 	// [6] Lấy danh sách pạn pè
 	  function showListFriendAPI(response){
 		    var numRows = 0;
+		    var name = new Array();
 		  FB.api(
-			  '/me/invitable_friends',
+			  '/me/taggable_friends',
 			  'GET',
 // 				  {"fields":"friends{id,name}"},
-				{"fields":"name,birthday,gender,id","pretty":"0","limit":"5000"},
+				{"fields":"name,birthday,gender,id,picture","pretty":"0","limit":"5000"},
 			  function(response) {
 			     if(!response || response.error){
-			    	 alert ("loi");
+			    	 alert ("loidd");
 			     }else{
 			    	 for (var i in response.data)
 			     	{
-			     		var newRow = $('<tr><td></td><td></td><td></td><td></td><td></td></tr>');
-			            var cols = newRow.children();
+			     		var newRow = $('<tr><td></td><td></td><td></td></tr>');
+			            var img = '<img src="'+response.data[i].picture.data.url+'"/>';
+			     		var cols = newRow.children();
 			            cols.eq(0).text(numRows);
 			            cols.eq(1).text(response.data[i].name);
 //			            cols.eq(2).text(response.data[i].id);
-			            cols.eq(3).text(response.data[i].gender);
-			            cols.eq(4).text(response.data[i].birthday);
+//			            cols.eq(3).text(response.data[i].gender);
+//			            cols.eq(4).text(response.data[i].birthday);
+			            cols.eq(2).append(img);
 			            
 			            newRow.appendTo('#tableBody');
 			            numRows++;
+			            //tạo mảng các kí tự bắt đầu của tên
+			            name.push(response.data[i].name.substring(0, 1));
 			     	}
+			    	 chart(name,"piechart","Statistics by letters",1);
 			     }
 			     
 				}
 			   
 		  );
-				
-		  
 	  	}
+	  
+	  // [7]  Hàm vẽ biểu đồ
+	  function chart(array,chartid,title,type){
+		  if(type==1){
+			  	var A = 0;
+			    var B = 0;
+			    var C = 0;
+			    var D = 0;
+			    var E = 0;
+			    var F = 0;
+			    var G = 0;
+			    var H = 0;
+			    var I = 0;
+			    var J = 0;
+			    var K = 0;
+			    var L = 0;
+			    var M = 0;
+			    var N = 0;
+			    var O = 0;
+			    var P = 0;
+			    var Q = 0;
+			    var R = 0;
+			    var S = 0;
+			    var T = 0;
+			    var U = 0;
+			    var W = 0;
+			    var X = 0;
+			    var Y = 0;
+			    var Z = 0;
+			    
+			    
+//			    var name = new Array();
+			    
+			    for(var i in array){
+	    	    	if(array[i]=='A') A += 1;
+	    	    	if(array[i]=='B') B += 1;
+	    	    	if(array[i]=='C') C += 1;
+	    	    	if(array[i]=='D') D += 1;
+	    	    	if(array[i]=='E') E += 1;
+	    	    	if(array[i]=='F') F += 1;
+	    	    	if(array[i]=='G') G += 1;
+	    	    	if(array[i]=='H') H += 1;
+	    	    	if(array[i]=='I') I += 1;
+	    	    	if(array[i]=='J') J += 1;
+	    	    	if(array[i]=='K') K += 1;
+	    	    	if(array[i]=='L') L += 1;
+	    	    	if(array[i]=='M') M += 1;
+	    	    	if(array[i]=='N') N += 1;
+	    	    	if(array[i]=='O') O += 1;
+	    	    	if(array[i]=='P') P += 1;
+	    	    	if(array[i]=='Q') Q += 1;
+	    	    	if(array[i]=='R') R += 1;
+	    	    	if(array[i]=='S') S += 1;
+	    	    	if(array[i]=='T') T += 1;
+	    	    	if(array[i]=='U') U += 1;
+	    	    	if(array[i]=='W') W += 1;
+	    	    	if(array[i]=='X') X += 1;
+	    	    	if(array[i]=='Y') Y += 1;
+	    	    	if(array[i]=='Z') Z += 1;
+	    	    	
+	    	    }
+			  //chart 
+		  		  google.charts.load("current", {packages:["corechart"]});
+		  	        google.charts.setOnLoadCallback(drawChart);
+		  	        function drawChart() {
+		  	          var data = google.visualization.arrayToDataTable([
+		  	            ['Letter', 'Total'],
+		  	            ['A', A], ['B', B], ['C', C],
+		  	            ['D', D], ['E', E], ['F', F],
+		  	            ['G', G], ['H', H], ['I', I],
+			  	        ['J', J], ['K', K], ['L', L],
+			  	        ['M', M], ['N', N], ['O', O],
+			  	        ['P', P], ['Q', Q], ['R', R],
+			  	      	['S', S], ['T', T], ['U', U],
+			  	    	['W', W], ['X', X], ['Y', Y],['Z', Z]
+		  	          ]);
+
+		  	          var options = {
+		  	            title: title,
+		  	            legend: 'left',
+		  	            width:  900,
+		  	            height: 600,
+		  	            pieSliceText: 'label',
+		  	            slices: { 
+		  	            		  0: {offset: 0.5},
+		  	            		  4: {offset: 0.2},
+		  	                      12: {offset: 0.3},
+		  	                      14: {offset: 0.4},
+		  	                      15: {offset: 0.5}
+		  	                      
+		  	            },
+		  	          };
+
+		  	          var chart = new google.visualization.PieChart(document.getElementById(chartid));
+		  	          chart.draw(data, options);
+		  	      }
+		  }
+		  //chart gender
+		  if(type==2){
+			var male=0;
+			var female=0;
+			
+			for (var i in array) {
+				if(array[i].toUpperCase()=="Male".toUpperCase()) male+=1;
+				else female+=1;
+			}
+			
+			//chart 
+	  		  google.charts.load("current", {packages:["corechart"]});
+	  	        google.charts.setOnLoadCallback(drawChart);
+	  	        function drawChart() {
+	  	          var data = google.visualization.arrayToDataTable([
+	  	            ['Gender', 'Total'],
+	  	            ['Male', male], ['Female', female]
+	  	          ]);
+
+	  	          var options = {
+	  	            title: title,
+	  	            legend: 'left',
+	  	            is3D: true,
+	  	            width:  900,
+	  	            height: 600,
+	  	            slices: { 
+	  	                      
+	  	            },
+	  	          };
+
+	  	          var chart = new google.visualization.PieChart(document.getElementById(chartid));
+	  	          chart.draw(data, options);
+	  	      }
+		  }
+		  //chart location
+		  if(type==3){
+			  var HCM=0;
+			  var HN=0;
+			  var DN=0;
+			  var CT=0;
+			  var Other=0;
+			  
+			  
+			  for (var i in array) {
+				  if(array[i].trim().toUpperCase().indexOf("HO CHI MINH")!=-1){HCM+=1;}
+				  if(array[i].trim().toUpperCase().indexOf("HOCHIMINH")!=-1){HCM+=1;}
+				  if(array[i].trim().toUpperCase().indexOf("HA NOI")!=-1){HN+=1;}
+				  if(array[i].trim().toUpperCase().indexOf("HANOI")!=-1){HN+=1;}
+				  if(array[i].trim().toUpperCase().indexOf("DA NANG")!=-1){DN+=1;}
+				  if(array[i].trim().toUpperCase().indexOf("DANANG")!=-1){DN+=1;}
+				  if(array[i].trim().toUpperCase().indexOf("CAN THO")!=-1){CT+=1;}
+				  if(array[i].trim().toUpperCase().indexOf("CANTHO")!=-1){CT+=1;}
+				  else Other+=1;
+				}
+				
+				//chart 
+		  		  google.charts.load("current", {packages:["corechart"]});
+		  	        google.charts.setOnLoadCallback(drawChart);
+		  	        function drawChart() {
+		  	          var data = google.visualization.arrayToDataTable([
+		  	            ['Location', 'Total'],
+		  	            ['Hồ Chí Minh', HCM], ['Hà Nội', HN],
+		  	            ['Đà Nẵng', DN], ['Cần Thơ', CT],
+		  	          	['Khác', Other]
+		  	          ]);
+
+		  	          var options = {
+		  	            title: title,
+		  	            legend: 'left',
+		  	            is3D: true,
+//		  	            pieHole: 0.4,
+		  	            width:  900,
+		  	            height: 600,
+		  	            pieSliceText: 'percentage',
+		  	            pieSliceTextStyle: {color: "white", fontSize: 16},
+		  	            slices: { 
+		  	            	 0: {offset: 0.1},
+		  	            	 4: {offset: 0.0}
+		  	            },
+		  	          };
+
+		  	          var chart = new google.visualization.PieChart(document.getElementById(chartid));
+		  	          chart.draw(data, options);
+		  	      }
+		  }
+		//chart age
+		  if(type==4){
+			  var younger=0;
+			  var young=0;
+			  var old=0;
+			  var older=0;
+			  var curyear = new Date().getFullYear();
+			  for (var i in array) {
+				  var date = array[i].trim().split("/");
+				  var year = Math.abs(date[2] - curyear);
+				  if(year<=25){
+					  younger+=1;
+				  }
+				  if(year>=26&&year<=35){
+					  young+=1;
+				  }
+				  if(year>=36&&year<=55){
+					  old+=1;
+				  }
+				  else older+=1;
+				}
+				
+				//chart 
+		  		  google.charts.load("current", {packages:["corechart"]});
+		  	        google.charts.setOnLoadCallback(drawChart);
+		  	        function drawChart() {
+		  	          var data = google.visualization.arrayToDataTable([
+		  	            ['Age', 'Total'],
+		  	            ['<=25', younger], ['26-35', young],
+		  	            ['36-55', old], ['>=56', older]
+		  	          ]);
+
+		  	          var options = {
+		  	            title: title,
+		  	            legend: 'left',
+		  	            is3D: true,
+//		  	            pieHole: 0.4,
+		  	            width:  900,
+		  	            height: 600,
+		  	            pieSliceText: 'percentage',
+		  	            pieSliceTextStyle: {color: "white", fontSize: 16},
+		  	            slices: { 
+		  	            	0: {offset: 0.05}
+		  	            },
+		  	          };
+
+		  	          var chart = new google.visualization.PieChart(document.getElementById(chartid));
+		  	          chart.draw(data, options);
+		  	      }
+		  }
+	  }
 //	  
 //	  function showListFriendAPI(response,tableName, itemsPerPage){
 //		  
@@ -286,9 +523,9 @@
 //			    	    	if(name[i]=='Z') Z += 1;
 //			    	    	
 //			    	    }
-////			    	    alert ("A"+ A);
-////			    	    alert ("B"+ B);
-//			    	  //chart 
+//////			    	    alert ("A"+ A);
+//////			    	    alert ("B"+ B);
+////			    	  //chart 
 //			  		  google.charts.load("current", {packages:["corechart"]});
 //			  	        google.charts.setOnLoadCallback(drawChart);
 //			  	        function drawChart() {
@@ -324,13 +561,13 @@
 //			     }
 //			     
 //				}
-//			   
+////			   
 //		  );
-			
-		  
-	  
-		  
-		  
+//			
+//		  
+//	  
+//		  
+//		  
 //	  	}
 
 	  // [7] Xử lí sự kiện cho service
@@ -339,6 +576,7 @@
 	  			document.getElementById("background-pop").style.display = "block";
 	  			return false;
 	  		}
+	  		
 	  		return true;
 	  	}
 	  // [8] Lấy danh sách pạn pè có sử dụng BapApp
@@ -375,6 +613,9 @@
 	  
 	  	 function showFriendAPI(){
 			  var numRows = 0;
+			  var gender = new Array();
+			  var location = new Array();
+			  var age = new Array();
 			  
 			  FB.api(
 					  '/me/friends',
@@ -398,7 +639,16 @@
 						            newRow.appendTo('#tableBody-all');
 						            numRows++;
 						            
+						          //tạo mảng giới tính
+						            gender.push(response.data[i].gender);
+						          //tạo mảng vị trí địa lý
+						            location.push(response.data[i].location.name);
+						          //tạo mảng tuổi
+						            age.push(response.data[i].birthday);
 					    	 }
+					    	 chart(gender,"piechart-gender","Statistics by gender",2);
+					    	 chart(location,"piechart-location","Statistics by location",3);
+					    	 chart(age,"piechart-age","Statistics by age",4);
 					    }
 					  }
 					  

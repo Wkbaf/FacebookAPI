@@ -7,9 +7,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jQuery.js"></script>
 		 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<!-- <script type="text/javascript" src="js/Javascript-SDK.js"></script> -->
+<!-- 		<script type="text/javascript" src="js/Javascript-SDK.js"></script> -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/test.css"/>
+<!-- 		<link rel="stylesheet" type="text/css" href="css/test.css"/> -->
 </head>
 <body >
 	<script>
@@ -24,7 +24,7 @@
 	</script>
 	
 	<script>
-	var appId = 1660779217499961;
+	var appId = 1400043393356379;
 	
 	// [1] Load các thành phần cần thiết
  	window.fbAsyncInit = function() {
@@ -51,7 +51,7 @@
 	    	document.getElementById("lbl").setAttribute("style","display:block");
 // 	    	showInforAPI();
 // 	    	showListFriendAPI(response);
-// 	    	showFriendAPI(response);
+	    	showFriendAPI(response);
 	    } 
 		// Người dùng đăng nhập FB nhưng chưa đăng nhập ứng dụng
 	    else if (response.status === 'not_authorized') {
@@ -85,33 +85,33 @@
 	}
 	
 	// [6] Lấy danh sách pạn pè
-	  function showListFriendAPI(response){
-		  var numRows = 0;
-		  FB.api(
-				  '/me/friends',
-				  'GET',
-				  {"fields":"name,birthday,about","pretty":"0","limit":"5000"},
-				  function(response) {
-				     if(!response || response.error){
-				    	 alert ("loi");
-				     }else{
-				    	 alert ("co");
-				    	 for (var i in response.data)
-				    	 {
-						// 		JQuery			     		
-								var newRow = $('<tr><td></td><td></td></tr>');
-					            var cols = newRow.children();
-					            cols.eq(0).text(numRows);
-					            cols.eq(1).text(response.data[i].name);
-					            newRow.appendTo('#tableBody');
-					            numRows++;
+// 	  function showListFriendAPI(response){
+// 		  var numRows = 0;
+// 		  FB.api(
+// 				  '/me/friends',
+// 				  'GET',
+// 				  {"fields":"name,birthday,about","pretty":"0","limit":"5000"},
+// 				  function(response) {
+// 				     if(!response || response.error){
+// 				    	 alert ("loi");
+// 				     }else{
+// 				    	 alert ("co");
+// 				    	 for (var i in response.data)
+// 				    	 {
+// 						// 		JQuery			     		
+// 								var newRow = $('<tr><td></td><td></td></tr>');
+// 					            var cols = newRow.children();
+// 					            cols.eq(0).text(numRows);
+// 					            cols.eq(1).text(response.data[i].name);
+// 					            newRow.appendTo('#tableBody');
+// 					            numRows++;
 					            
-					  }
-				    }
-				  }
-				);
+// 					  }
+// 				    }
+// 				  }
+// 				);
 		 
-	}
+// 	}
 	
 	
 	//[7] get friend all infor
@@ -141,6 +141,35 @@
 					  }
 					);
 			 
+// 		var numRows = 0;
+		  
+// 		  FB.api(
+// 				  '/me/friends',
+// 				  'GET',
+// 				  {"fields":"name,gender,birthday,id,location","pretty":"0","limit":"5000"},
+// 				  function(response) {
+// 				     if(!response || response.error){
+// 				    	 alert ("loi");
+// 				     }else{
+// 				    	 for (var i in response.data)
+// 				    	 {
+// 						// 		JQuery			     		
+// 								var newRow = $('<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>');
+// 					            var cols = newRow.children();
+// 					            cols.eq(0).text(numRows);
+// 					            cols.eq(1).text(response.data[i].name);
+// 					            cols.eq(2).text(response.data[i].id);
+// 					            cols.eq(3).text(response.data[i].gender);
+// 					            cols.eq(4).text(response.data[i].birthday);
+// 					            cols.eq(5).text(response.data[i].location.name);
+// 					            newRow.appendTo('#tableBody-all');
+// 					            numRows++;
+// 				    	 }
+// 				    }
+// 				  }
+				  
+				  
+// 				);
 		}
 	  
 	</script>
@@ -237,18 +266,17 @@
     
 
 <!--     chart -->
-	<div id="piechart" style="width: 900px; height: 500px;"></div>
+<!-- 	<div id="piechart" style="width: 900px; height: 500px;"></div> -->
 
-
-	<div id="demo"></div>
+<!-- 	<div id="demo"></div> -->
 	
 	
 	
 <!-- 	test background -->
-		<div class="background">
-			<div class="main-frame">
-				fdsfds
-			</div>
-		</div>
+<!-- 		<div class="background"> -->
+<!-- 			<div class="main-frame"> -->
+				
+<!-- 			</div> -->
+<!-- 		</div> -->
 </body>
 </html>

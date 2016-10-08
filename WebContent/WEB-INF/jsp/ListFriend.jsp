@@ -5,12 +5,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Services</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jQuery.js"></script>
 	<script type="text/javascript" src="js/Javascript-SDK.js"></script>
+	<script type="text/javascript" src="js/loader.js"></script>
 <!-- 	<script type="text/javascript" src="js/Javascript-Inter.js"></script> -->
 	<link rel="stylesheet" type="text/css" href="css/ListFriend.css"/>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 </head>
 <body >
 
@@ -43,17 +44,6 @@
 			  });
 	
 			  };
-			
-// 			 FB.getLoginStatus(function() {
-// 					showListFriendAPI(response);
-// 					alert ("DSad");
-// 					showFriendAPI(response);
-// 				 var pager = new showListFriendAPI(response,'tbl-mutalfriend',20);
-// 				pager.list();
-// 				pager.init();
-// 					}
-// 				);
-// 			 };
 			 
 	</script>
 		
@@ -61,31 +51,97 @@
 <!-- 	CODE PAGE -->
 
 <!-- 	Script for background -->
-
-		<div class="background">
+			<div class="Bar-friend">
+			
+				<div class="logo">BapApp</div>
+				
+				<!-- search friends -->
+				<div class="search">
+		           <input type="text" class="search input-search"  placeholder="Search" >
+				</div>
+				
+				<div class="search-all">
+		           <input type="text" class="search-all input-search-all"  placeholder="Search" >
+				</div>
+				
+				<!-- bar control -->
+				<div class="bar-control">
+				
+					<img id="pre" alt="pre" src="image/Friendlist/pre.png">
+					<img id="close" alt="close" src="image/Friendlist/x.png">
+					<img id="next" alt="next" src="image/Friendlist/next.png">
+				
+				</div>
+				
+			</div>
+			
+<!-- 		<div class="background"> -->
 			<div class="main-frame">
+			
+				<!-- Path -->
+				<div class="path">
+					<span><a href="homepage.html">Home</a></span>/
+					<span><a href="#" id="Friends">Friends</a></span>/
+					<span><a href="" id="fr-fb" class="not-active">Friends on Facebook</a></span>
+					<span><a href="" id="fr-bp" class="not-active">Friends on BapApp</a></span>
+				</div>
+			
+				<div class="pop-up-friend" id="pop-up-friend">
+				
+					<div class="pop-up-friend img"></div>
+					
+					<div class="subframe-l"></div>
+					
+					<div class="subframe-r"></div>
+					
+					<div class="text">
+						<span>Friends</span>
+						<span>on</span>
+						<span>BapApp</span>
+						<span>Facebook</span>
+					</div>
+					
+				</div>
 				
 				<!-- table of friend all -->
+				<div class="statistics" id="statistics">
+					<h1>Statistics By</h1>
+					<a href="#chart1" id="byleter">First letter 's name</a>
+				</div>
+			
 				<div id="margin-tbl-listfriend">
+				
+					<h1>Your Friend on Facebook</h1>
+					
 					<table id="tbl-listfriend">
+					
 						<thead>
 							<tr>
-								<th>No.</th>
-								<th>NAME</th>
-								<th>ID</th>
-								<th>GENDER</th>
-								<th>BIRTHDAY</th>
-								<th>LOCATION</th>
+								<th class="align1">No.</th>
+								<th class="align2">NAME</th>
+								<th class="align3">PICTURE</th>
 							</tr>
 						</thead>
+						
 						<tbody id="tableBody">
 						</tbody>
+						
 					</table>
 				</div>
 		
 				<!-- table of friend with all infor -->
+				<div class="statistics" id="statistics-all">
+					<h1>Statistics By</h1>
+					<a href="#chart1" id="bygender">Gender</a><br>
+					<a href="#chart1" id="bylocation">Location</a><br>
+					<a href="#chart1" id="byage">Age</a>
+				</div>
+			
 				<div id="margin-tbl-listfriend-all">
+					<h1>Your Friend on BapApp</h1>
+					
 					<table id="tbl-listfriend-all">
+					
 						<thead>
 							<tr>
 								<th>No.</th>
@@ -96,37 +152,30 @@
 								<th>LOCATION</th>
 							</tr>
 						</thead>
+						
 						<tbody id="tableBody-all">
 						</tbody>
+						
 					</table>
 				</div>
 		
+			<!--     chart -->
+<!-- 			<div id="piechart" style="width: 900px; height: 500px;"></div> -->
+			<div id="demo"></div>
+			
 			</div>
-		</div>
-			 	
-<!-- 	 Script for content -->
+			<!-- menu chart -->
+			<div class="charts">
+				<a name="chart1"></a>
+				<span id="piechart" ></span>
+				<span id="piechart-gender" ></span>
+				<span id="piechart-location" ></span>
+				<span id="piechart-age" ></span>
+			</div>	
+			
+			
+<!-- 		</div> -->
 
-<!-- search friends -->
-		<div id="container">
-			<div class="row">
-		        <div class="col-sm-6 col-sm-offset-3">
-		                <div class="input-group stylish-input-group">
-		                    <input type="text" class="form-control"  placeholder="Search" >
-		                    <span class="input-group-addon">
-		                        <button type="submit">
-		                            <span class="glyphicon glyphicon-search"></span>
-		                        </button>  
-		                    </span>
-		                </div>
-		        </div>
-			</div>
-		</div>
-	
-
-		
-
-	
-	
-	<button id="goHome">Go Home</button>
+<!-- 	<button id="goHome">Go Home</button> -->
 </body>
 </html>

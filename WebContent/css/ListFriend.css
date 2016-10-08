@@ -21,28 +21,204 @@ body , html{
    /*important */
   height: 100%;
   width: 100%;
-  background-color: tan;
+  background-color: #ff7376;
   z-index: -6;
   background-attachment: fixed;
 }
 .background{
-	 background-image: url("../image/Friendlist/bg6.jpg");
-	 width: 100%;
-	 height: 100%;
-	 background-size: cover;
-	 background-attachment: fixed;
-	 position: absolute;
-	 top: 0;
-	 z-index: 1;/* 	 note */
-	 border-radius: 0 0 20px 20px;/* top left, top right, bottom right, bottom left */
+/* 	 background-image: url("../image/Friendlist/bg6.jpg"); */
+/* 	 width: 100%; */
+/* 	 height: 100%; */
+/* 	 background-size: cover; */
+/* 	 background-attachment: fixed; */
+/* 	 position: absolute; */
+/* 	 top: 0; */
+/* 	 z-index: 1;	 note */
+/* 	 border-radius: 0 0 20px 20px;top left, top right, bottom right, bottom left */
 }
 .main-frame{
-	margin: 35% auto;
-	background-color: white;
-	width: 98%;
-	min-height: 100%;
-	border-radius: 7px 7px 0 0;
+/* 	margin: 35% auto; */
+	position: absolute;
+	top: 0%;
+/* 	background-color: white; */
+	width: 100%;
+	height: 100%;
+/* 	border-radius: 7px 7px 0 0; */
 	z-index: 1;
+/* 	background-image: url("../image/bg8.png"); */
+/* 	background-size: cover; */
+/* 	background-repeat: no-repeat; */
+	background-color: white;
+}
+/* css for path */
+.path{
+	margin-top: 5%;
+	font-size: 16px;
+	color: black;
+	z-index: 3;
+}
+.path a{
+	color: teal;
+}
+.path a:HOVER{
+	text-decoration: underline;
+	color: teal;
+}
+#fr-fb{
+	display: none;	
+	text-decoration: underline;
+}
+#fr-bp{
+	display: none;
+	text-decoration: underline;
+}
+.not-active {
+   pointer-events: none;
+   cursor: default;
+}
+/* css for menu friend */
+.Bar-friend{
+	position: fixed;
+	top:0;
+	width: 100%;
+	height: 10%;
+	background-color: #ff7376;
+	z-index: 3;
+	display: none;
+	padding: 10px 20px;
+}
+.logo{
+	float: left;
+	font-size: 32px;
+	color: white;
+	cursor: pointer;
+}
+/* css for search table friends */
+.search{
+/*     position: absolute; */
+/*     top: 10%; */
+/*     left: 70%; */
+	float: left;
+	margin-top: 4px;
+	margin-left: 5px;
+    z-index: 3;
+    display: none;
+}
+.search.input-search{
+	background: white;
+	width: 300px;
+	height: 30px;
+	border-radius: 3px;
+	border: 0;
+}
+.search.input-search:HOVER{
+	border: 1px solid cyan;
+}
+.search-all{
+/*     position: absolute; */
+/*     top: 10%; */
+/*     left: 70%; */
+	float: left;
+	margin-top: 4px;
+	margin-left: 5px;
+    z-index: 3;
+    display: none;
+}
+.search-all.input-search-all{
+	background: white;
+	width: 300px;
+	height: 30px;
+	border-radius: 3px;
+	border: 0;
+}
+.search-all.input-search-all:HOVER{
+	border: 1px solid cyan;
+}
+/* css for bar control */
+.bar-control{
+/* 	position: absolute; */
+/* 	top: 3%; */
+/* 	left: 88%; */
+	float: right;
+	z-index: 5;
+	display: none;
+}
+.bar-control img{
+	float: left;
+	cursor: pointer;
+}
+/* css for pop up friend */
+.pop-up-friend{
+	
+/* 	background-repeat: no-repeat; */
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.pop-up-friend.img{
+	background-image:  url("../image/Friendlist/friends.png");
+}
+.subframe-l{
+/* 	border-top: 200px solid teal; */
+/* 	border-right: 50px solid transparent; */
+/* 	background-color: teal; */
+    
+	width: 53%;
+	height: 100%;
+	float: left;
+	z-index: 5;
+	opacity: 0.5;
+	cursor: pointer;
+}
+.subframe-r{
+	width: 47%;
+	height: 100%;
+	float: right;
+	z-index: 5;
+	opacity: 0.5;
+	cursor: pointer;
+}
+/* css for text */
+.text{
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+}
+.text span:FIRST-CHILD{
+	font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif;
+	font-size: 60px;
+	position: absolute;
+	top: 26%;
+	left: 38%;
+	color: black;
+	z-index: 4;
+}
+.text span:nth-child(2){
+	font-size: 24px;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	color: teal;
+	z-index: 4;
+}
+.text span:nth-child(3){
+	font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif;
+	font-size: 52px;
+	position: absolute;
+	top: 45%;
+	left: 30%;
+	z-index: 4;
+	color: black;
+}
+.text span:nth-child(4){
+	font-size: 52px;
+	position: absolute;
+	top: 45%;
+	left: 60%;
+	color: #4267B2;
 }
 /* css for content */
 .contain-frame{
@@ -50,6 +226,19 @@ body , html{
 	top: 0;
 	width: 100%;
 	height: 100%;
+}
+/* css for chart */
+.charts{
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	display: none;
+	background-color: white;
+}
+.charts span{
+	display: none;
 }
 /* Frame in opacity background */
 .frame {
@@ -106,138 +295,169 @@ body , html{
     text-shadow: 0px 0px 3px rgba(0,0,0, .5);
 }
 
+/* css for menu statistics */
+.statistics{
+	position: absolute;
+	top: 20%;
+	left: 78%;
+	width: 20%;
+	height: 60%;
+/* 	background-color: teal; */
+	display: none;
+	z-index: 3;
+}
+.statistics h1{
+	font-size: 36px;
+	font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif;
+}
+.statistics a{
+	color: black;
+	font-size: 24px;
+	font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif;
+	display: inline-block;/* 	full width of tag a */
+	cursor: pointer;
+	width: 100%;
+	text-align: justify;
+}
+.statistics a:HOVER{
+	text-decoration: none;
+/* 	border: 1px solid cyan; */
+	background-color:  #ff7376;
+	color: white;
+}
 /* Css for table list friend */
 thead > tr, tbody{
     display:block;
 }
 #margin-tbl-listfriend{
 	position: relative;
-	top: 5%;
+	top: 7%;
 	left: 0%;
+	width: 100%;
+/* 	height: 100%; */
 	z-index: 2;
+	float: left;
+}
+#margin-tbl-listfriend h1{
+	margin-left: 35%;
+	margin-top: -4%;
+	display: none;
+	font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif;
 }
 #tbl-listfriend{
-	margin: 0 auto;
-	border-collapse: collapse;
+/* 	border-collapse: collapse; */
     width: 70%;
-/*  height: 400px; */
+/*  	height: 400px; */
  	overflow: auto;
 	color: black;
 	z-index: 4;
+	display: none;
 }
 #tbl-listfriend tbody{
- 	background-color: white;
-    height: 455px;
+ 	background-color: #f2e2cd;
+    height: 500px;
     overflow: scroll;
-    width: 100%;
-}
-#tbl-listfriend th:FIRST-CHILD{
-	padding: 3px 15px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    background-color: #4CAF50;
-    color: white;
-    width: 2%;
+    opacity: 0.9;
+    font-size: 18px;
 }
 #tbl-listfriend th{
 	padding: 3px 15px;
     text-align: center;
     border-bottom: 1px solid #ddd;
-    background-color: #4CAF50;
+    background-color: #295f48;
     color: white;
 }
+#tbl-listfriend th:FIRST-CHILD{
+	width: 2%;
+}
+#tbl-listfriend td{
+	 padding: 3px 15px;
+}
 #tbl-listfriend td:FIRST-CHILD{
-	 padding: 3px 15px;
-     width:60px;
-     width: 2%;
+	width: 2%;
 }
-#tbl-listfriend td:AFTER{
-	 padding: 3px 15px;
-     width:60px;
-     width: 10%;
-}
-
-#tbl-listfriend tr:hover{background-color: NavajoWhite}
+#tbl-listfriend tr:hover{background-color: #dcb47d}
 #tbl-listfriend tr:nth-child(even):hover{
-	background-color:SandyBrown;
+	background-color: #b8a284;
 }
 
 #tbl-listfriend tr:nth-child(even){
-	background-color: BurlyWood;
+	background-color: SandyBrown;
 }
 
-/* csss for table list friend all */
+/* css for table list friend all */
 #margin-tbl-listfriend-all{
 	position: relative;
-	top: 10%;
+	top: 7%;
 	left: 0%;
 	z-index: 2;
+	float: left;
 	width: 100%;
-	height: 100%;
+/* 	height: 100%; */
+/* 	overflow: scroll; */
+}
+#margin-tbl-listfriend-all h1{
+	margin-left: 35%;
+	margin-top: -4%;
+	display: none;
+	font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif;
 }
 #tbl-listfriend-all{
-	margin: 0 auto;
+/* 	margin: 0 auto; */
 	border-collapse: collapse;
-    width: 80%;
+    width: 75%;
     overflow: auto;
 	color: black;
+	display: none;
+}
+#tbl-listfriend-all thead{
+	width: 100%
 }
 #tbl-listfriend-all tbody{
- 	background-color: white;
-    min-height: 50px;
+ 	background-color:  	#f2e2cd;
+    height: 500px;
     overflow: scroll;
     width: 100%;
-}
-#tbl-listfriend-all th:FIRST-CHILD{
-	padding: 3px 15px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    background-color: #4CAF50;
-    color: white;
-    width: 2%;
-}
-#tbl-listfriend-all th{
-	padding: 3px 15px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    background-color: #4CAF50;
-    color: white;
-}
-#tbl-listfriend-all td:FIRST-CHILD{
-	 padding: 3px 15px;
-     width:60px;
-     width: 2%;
-}
-#tbl-listfriend-all td:AFTER{
-	 padding: 3px 15px;
-     width:60px;
-     width: 20%;
+    opacity: 0.8;
+    font-size: 18px;
 }
 
-#tbl-listfriend-all tr:hover{background-color: NavajoWhite}
+#tbl-listfriend-all th{
+	padding: 3px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: #295f48;
+    color: white;
+    width: 10%;
+}
+#tbl-listfriend-all th:FIRST-CHILD{
+    width: 2%;
+}
+#tbl-listfriend-all th:nth-child(4){
+    width: 5%;
+}
+#tbl-listfriend-all th:nth-child(5){
+    width: 5%;
+}
+#tbl-listfriend-all td{
+	 padding: 5px 0px 5px 0px;
+	 text-align: left;
+     width: 10%;
+}
+#tbl-listfriend-all td:FIRST-CHILD{
+     width: 2%;
+}
+#tbl-listfriend-all td:nth-child(4){
+    width: 5%;
+}
+#tbl-listfriend-all td:nth-child(5){
+    width: 5%;
+}
+#tbl-listfriend-all tr:hover{background-color: #dcb47d}
 #tbl-listfriend-all tr:nth-child(even):hover{
-	background-color:SandyBrown;
+	background-color: #b8a284;
 }
 
 #tbl-listfriend-all tr:nth-child(even){
-	background-color: BurlyWood;
-}
-
-/* css for search table friends */
-#container{
-    position: absolute;
-    top: 0;
-   
-}
-.stylish-input-group .input-group-addon{
-    background: white !important; 
-}
-.stylish-input-group .form-control{
-	border-right:0; 
-	box-shadow:0 0 0; 
-	border-color:#ccc;
-}
-.stylish-input-group button{
-    border:0;
-    background:transparent;
+	background-color: SandyBrown;
 }

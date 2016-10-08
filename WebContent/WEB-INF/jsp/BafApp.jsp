@@ -12,6 +12,11 @@
 	<link rel="stylesheet" type="text/css" href="css/BafApp.css"/>
 	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<script src="js/wow.min_.js"></script>
+	<script type="text/javascript">
+		new WOW().init();
+	</script>
 </head>
 <body>
 
@@ -57,7 +62,9 @@
 	
 	<!--  CODE PAGE -->
 	
-		<div class="fixed-bg bg-1"></div>
+		<div class="fixed-bg bg-1" ></div>
+		
+		<div class="fixed-bg bg-1tp"></div>
 		
 <!-- 		<div class="fixed-bg-temp"><a name="service"></a></div> -->
 
@@ -75,35 +82,45 @@
 		
 		<div class="contain-frame">
 		
+<!-- img star moon cloud to tranform bg -->
+		<img class="img-star wow bounceInDown" alt="star" src="image/homepage/star.png">
+		<img class="img-starw wow bounceInDown" alt="starw" src="image/homepage/starw.png">
+		<img class="img-moon wow bounceInDown" alt="moon" src="image/homepage/moon.png">
+		<img class="img-cloud wow bounceInDown" alt="cloud" src="image/homepage/cloud.png">
+		
 		<!-- MENU -->
-<!-- 			<div class="menu-nav"> -->
-<!-- 	            <div id="wrapper"> -->
-<!-- 	                 <div class="nav"> -->
-<!-- 	                     <ul> -->
-<!-- 	                         <li class="active"><a href="" id="a1"><span class="glyphicon glyphicon-home"></span ><span class="nav-text">Home</span> </a></li> -->
-<!-- 	                         <li><a href="#service" id="a2"><span class="glyphicon glyphicon-play-circle"></span><span class="nav-text">Service</span></a></li> -->
-<!-- 	                         <li><a href="#about" id="a3"><span class="glyphicon glyphicon-th-large"></span><span class="nav-text">About</span></a></li> -->
-<!-- 	                         <li><a href="#" id="a4"><span class="glyphicon glyphicon-book"></span><span class="nav-text">How to use</span></a></li> -->
+			<div class="menu-nav">
+	            <div id="wrapper">
+	                 <div class="nav">
+	                     <ul>
+	                         <li class="active"><a href="" id="a1"><span class="glyphicon glyphicon-home"></span ><span class="nav-text">Home</span> </a></li>
+	                         <li><a href="#service" id="a2"><span class="glyphicon glyphicon-play-circle"></span><span class="nav-text">Service</span></a></li>
+	                         <li><a href="#about" id="a3"><span class="glyphicon glyphicon-th-large"></span><span class="nav-text">About us</span></a></li>
+	                         <li><a href="#" id="a4"><span class="glyphicon glyphicon-book"></span><span class="nav-text">Contact us</span></a></li>
 <!-- 	                         <li><a href="#" class="fb" id="btb" onclick="RequestLoginFB()" style="display:none"><img alt="facebookimg" src="image/fb.png"></a></li> -->
-<!-- 	                     </ul> -->
-<!-- 	                 </div>   -->
-<!-- 	            </div> -->
-<!--         	</div> -->
+	                     </ul>
+	                 </div>  
+	            </div>
+        	</div>
 
 		
         	
 		<!-- Frame in opacityBG -->
-			<div class="frame">
-<!-- 		 		<div class="logan1"> -->
-<!-- 					<h1><span id="citylights">BAPAPP</span></h1> -->
-<!-- 					<hr> -->
-<!-- 					<h1>Forever your<span class="span1">Friend</span></h1> -->
-<!-- 				</div> -->
+			<div class="frame wow bounceInDown">
 				<img  id="cockpit" alt="cockpit" src="image/cockpit2.gif" >
 				<span id="span-cockpit" class="frame sub-framefb" onclick="RequestLoginFB()"></span>
 	 			<span class="frame sub-frameser" onclick="location='#service'"></span>
 	 			<span class="frame sub-framecont" ></span>
 	 			<span class="frame sub-frameabout" ></span>
+	 		</div>
+	 		
+	 		<div class="frametp">
+	 			<div class="logan1">
+<!-- 					<h1><span id="citylights">BAPAPP</span></h1> -->
+<!-- 					<hr> -->
+					<h1><span class="span1">BAPAPP</span></h1>
+				</div>
+				<a href="#service" class="frametp subframe"></a>
 	 		</div>
 	 	
 			<div class="contain-bg2">
@@ -111,28 +128,53 @@
 				
 				<div class="content-bg2">
 					<div class="content-bg2 child">
+					
 						<div class="content-bg2 child circle">
 							<a href="listfriend.html" onclick="return CheckLog()">
 								<img class="img" id="img1" alt="icon-friend" src="image/icon-b3.png">
 							</a>
 						</div>
-						<h1><a href="listfriend.html">List Friends</a></h1>
+						
+						<h1><a href="listfriend.html">Friends</a></h1>
+						
+						<h4>
+							<b>Friendship</b> is not a big thing ...
+							It's a million little things
+						</h4>
 					</div>
+					
+					
 					<div class="content-bg2 child">
+					
 						<div class="content-bg2 child circle">
-							<a href="listfriend.html" onclick="return CheckLog()">
+							<a href="listfriend.html?1" onclick="return CheckLog()">
 								<img class="img" id="img2"  alt="icon-friend" src="image/icon-genderb.png">
 							</a>
 						</div>
-						<h1>Genders</h1>
+						
+						<h1><a href="listfriend.html?1">Genders</a></h1>
+						
+						<h4>
+							Don't live up to your stereotypes
+						</h4>
+						<h3>SHERMAN ALEXIE</h3>
 					</div>
+					
+					
 					<div class="content-bg2 child">
+					
 						<div class="content-bg2 child circle">
-							<a href="listfriend.html" onclick="return CheckLog()">
+							<a id="link-location" href="listfriend.html?0" onclick="return CheckLog()">
 								<img class="img" id="img3"  alt="icon-friend" src="image/icon-globeb.png">
 							</a>
 						</div>
-						<h1>Geography</h1>
+						
+						<h1><a href="listfriend.html?0">Geography</a></h1>
+						
+						<h4>
+							One's destination is never a place, but a new way of seeing things
+						</h4>
+						<h3>Henry Miller</h3>
 					</div>
 				</div>
 			</div>

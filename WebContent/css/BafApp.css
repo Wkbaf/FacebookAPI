@@ -47,14 +47,14 @@ body , html{
 }
 .fixed-bg {
   position: relative;
-  top: -1%;
+  top: 0%;
   height: 100%;
   background-size: cover;
   z-index: -1;
   background-attachment: fixed;/*Note*/
 }
 .fixed-bg.bg-1 {
-  background-image: url("../image/cloud.gif");
+  background-image: url("../image/bg8.png");
 /*   background-image: url("../image/bg.jpg"); */
 /*   -webkit-transform: translateZ(60px); */
 /*     -moz-transform: translateZ(60px); */
@@ -68,6 +68,15 @@ body , html{
 /*     -ms-transform: rotateY(90deg) translateZ(60px); */
 /*     transform: rotateY(90deg) translateZ(60px); */
 /* } */
+.fixed-bg.bg-1tp {
+  display: none;
+  background-image: url("../image/cloud.gif");
+/*   background-image: url("../image/bg.jpg"); */
+/*   -webkit-transform: translateZ(60px); */
+/*     -moz-transform: translateZ(60px); */
+/*     -ms-transform: translateZ(60px); */
+/*     transform: translateZ(100px); */
+}
 .fixed-bg.bg-2 {
   background-image: url("#");
   background-color: darkslategrey;
@@ -86,6 +95,32 @@ body , html{
   background-image: url("#");
   background-color: darkslategrey;
 } 
+/* css img star moon cloud in homepage */
+.img-star{
+	position: absolute;
+	top: -3%;
+	left: 90%;
+	cursor: pointer;
+	z-index: 6;
+}
+.img-starw{
+	position: absolute;
+	top: -3%;
+	left: 90%;
+	cursor: pointer;
+	z-index: 6;
+	display: none;
+}
+.img-moon{
+	position: absolute;
+	top: -3%;
+	left: 78%;
+}
+.img-cloud{
+	position: absolute;
+	top: 0%;
+	left: 92%;
+}
 /* animate cube for background */
  @-webkit-keyframes spincube {
     from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
@@ -199,7 +234,22 @@ div.opacityBG{
 /*   background-image: url("../image/cockpit.gif"); */
   width: 100%;
   height: 100%;
-
+  display: none;
+}
+.frametp {
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.frametp.subframe{
+/* 	background: teal; */
+	width: 220px;
+	height: 50px;
+	position: absolute;
+	top: 70%;
+	left: 40%;
+	cursor: pointer;
 }
 .frame img{
   background-repeat: no-repeat;
@@ -399,6 +449,14 @@ div.opacityBG{
 	position: relative;
 	top: 10%;
 }
+.content-bg2.child h4{
+	margin-top: 10%;
+	color: white;
+}
+.content-bg2.child b{
+	font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif;
+	font-size: 20px;
+}
 .content-bg2.child.circle{
 	position: relative;
 	left: 8%;
@@ -419,7 +477,7 @@ div.opacityBG{
 }
 .content-bg2 a:hover{
 	text-decoration:  none;
-	color: tan;
+	color: #323232;
 }
 /* thanh ngang */
 .straight-line{
@@ -434,10 +492,11 @@ div.opacityBG{
 /* css logan1 */
 div.logan1{
   position: absolute;
-  top: 40%;
-  left: 50%;
-/*   font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif; */
-  font-family: 'Pacifico', cursive;
+  top: 65%;
+  left: 40%;
+  font-family: Comic Sans MS, "Comic Sans MS", Arial, sans-serif;
+/*   font-family: 'Pacifico', cursive; */
+  z-index: 5;
 }
 div.logan1 hr{
 	border: none;
@@ -446,8 +505,8 @@ div.logan1 hr{
 	background-color: white;
 }
 div.logan1 .span1{
-  color: tan;
-  font-size: 50px;
+  color: #361c14;
+  font-size: 60px;
 }
 div.logan1 .span2{
 /*   border: 2px solid chocolate; */
@@ -599,10 +658,9 @@ font-family: 'Pacifico', cursive;
 /* menu margin */
 .menu-nav{
 	position: absolute;
-	top: 0%;
-	left: 22%;
+	top: 62%;
+	left: 24%;
 	font-size: 15px;
-	z-index: 6;
 }
 /* menu component*/
 ol, ul, li { list-style:none }
@@ -626,7 +684,7 @@ padding: 5px 40px;
 font-weight: bold;
 }
 .nav ul li a{
-color: white;
+color: #361c14;
 }
 
 .nav ul li a:hover {
