@@ -148,11 +148,11 @@
 					
 						<div class="content-bg2 child circle">
 							<a href="listfriend.html?1" onclick="return CheckLog()">
-								<img class="img" id="img2"  alt="icon-friend" src="image/icon-genderb.png">
+								<img class="img" id="img2"  alt="icon-friend" src="image/icon-abcb.png">
 							</a>
 						</div>
 						
-						<h1><a href="listfriend.html?1">Genders</a></h1>
+						<h1><a href="listfriend.html?1">Letters</a></h1>
 						
 						<h4>
 							Don't live up to your stereotypes
@@ -180,11 +180,11 @@
 			</div>
 			
 			<div class="contain-bg3">
-				<h1>BapApp</h1>
+				<h1>BE HAPPY AND SMILE</h1>
 			</div>
 			
 			<div class="contain-bg4">
-				<h1>BapApp</h1>
+				<h1>sdfdsf</h1>
 			</div>
 			
 			<div class="contain-bg5">
@@ -204,7 +204,7 @@
 		<!-- Popup -->
 		<div id="background-pop">
 			<div class="popup">
-				<span class="btnLog fb-login-button ">Continue with Facebook</span>
+				<button class="button button1" onclick="RequestLoginFB()"><span>f</span></button>
 				<img alt="close-icon" src="image/popup-close.png" id="popupClose">
 			</div>
 		</div>

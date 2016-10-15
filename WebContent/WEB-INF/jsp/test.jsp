@@ -9,7 +9,7 @@
 		 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <!-- 		<script type="text/javascript" src="js/Javascript-SDK.js"></script> -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<!-- 		<link rel="stylesheet" type="text/css" href="css/test.css"/> -->
+		<link rel="stylesheet" type="text/css" href="css/test.css"/>
 </head>
 <body >
 	<script>
@@ -278,5 +278,6 @@
 				
 <!-- 			</div> -->
 <!-- 		</div> -->
+<button class="button button1" type="submit" name="submit"><span>f</span></button>
 </body>
 </html>

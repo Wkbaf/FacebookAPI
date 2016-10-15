@@ -111,7 +111,7 @@
 			
 				<div id="margin-tbl-listfriend">
 				
-					<h1>Your Friend on Facebook</h1>
+					<h1>Friends on Facebook</h1>
 					
 					<table id="tbl-listfriend">
 					
@@ -138,7 +138,7 @@
 				</div>
 			
 				<div id="margin-tbl-listfriend-all">
-					<h1>Your Friend on BapApp</h1>
+					<h1>Friends on BapApp</h1>
 					
 					<table id="tbl-listfriend-all">
 					

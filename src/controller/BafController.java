@@ -30,7 +30,7 @@ public class BafController {
 	@RequestMapping(value="friend", method=RequestMethod.GET)
 	public ModelAndView Friend(){
 		
-		ModelAndView model = new ModelAndView("Friend");
+		ModelAndView model = new ModelAndView("Friends");
 		
 		return model;
 	}

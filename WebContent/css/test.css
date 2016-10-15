@@ -1,0 +1,72 @@
+.body,html{
+   /*important */
+  height: 100%;
+  width: 100%;
+  background-color: tan;
+  z-index: -6;
+  background-attachment: fixed;
+}
+.background{
+	 background-image: url("../image/Friendlist/bg6.jpg");
+	 width: 100%;
+	 height: 100%;
+	 background-size: cover;
+	 background-attachment: fixed;
+	 position: absolute;
+	 top: 0;
+	 z-index: 1;/* 	 note */
+	 border-radius: 0 0 20px 20px;/* top left, top right, bottom right, bottom left */
+}
+.main-frame{
+	margin: 35% auto;
+	background-color: white;
+	width: 98%;
+	min-height: 50%;
+	border-radius: 7px 7px 0 0;
+	z-index: 1;
+}
+.button{
+	-webkit-transition-duration: 0.4s; /* Safari */
+   	border: 3px;
+	border-radius: 9px;
+  	border-color:blue;
+	border-style:solid;
+   	color: blue;
+   	padding: 15px 32px;
+   	text-align: center;
+   	text-decoration: none;
+   	font-size:16px;
+   	transition-duration: 0.4s;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button1:hover {
+    background-color: crimson;
+    color: white;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.1s;
+}
+.button span:after {
+  content: 'Login with Facebook';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 50px;
+  transition: 0.1s;
+}
+/*   padding for span tag*/
+.button:hover span {
+  padding-right: 200px; /*   spacing for content span Note */
+  padding-left: 0px;
+
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

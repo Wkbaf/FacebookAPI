@@ -33,10 +33,10 @@ $(function(){
 		$("#img1").attr("src","image/icon-b3.png");
 	});
 	$("#img2").on("mouseover",function(){
-		$("#img2").attr("src","image/icon-genderw.png");
+		$("#img2").attr("src","image/icon-abcw.png");
 	});
 	$("#img2").on("mouseout",function(){
-		$("#img2").attr("src","image/icon-genderb.png");
+		$("#img2").attr("src","image/icon-abcb.png");
 	});
 	$("#img3").on("mouseover",function(){
 		$("#img3").attr("src","image/icon-globew.png");
@@ -182,29 +182,29 @@ $(document).ready(function(){
 		 window.location = '#chart1';//note
 	}
 	if(popup[1]==1){
-		//hide pop up
-		$(".pop-up-friend").hide();
-		$("#tbl-listfriend-all").show();
-		$("#margin-tbl-listfriend-all").find("h1").show();
+		$("#tbl-listfriend").show();
+		$("#margin-tbl-listfriend").find("h1").show();
 		$(".bar-control").show();
 		//show-hide statistics
-		$("#byleter").hide();
-		$("#bygender").show();
-		$("#bylocation").show();
-		$("#byage").show();
-		$("#statistics-all").show();
-		$("#statistics").hide();
+		$("#byleter").show();
+		$("#bygender").hide();
+		$("#bylocation").hide();
+		$("#byage").hide();
+		$("#statistics").show();
+		$("#statistics-all").hide();
+		//hide pop up
+		$(".pop-up-friend").hide();
 		//show-hide search
-		$(".search-all").show();
+		$(".search").show();
 		//show Bar-friend
 		$(".Bar-friend").show();
 		//show-hide path
-		$("#fr-bp").show();
-		$("#fr-fb").hide();
+		$("#fr-fb").show();
+		$("#fr-bp").hide();
 		//show chart
 		$(".charts").show();
-		$("#piechart").hide();
-		$("#piechart-gender").show();
+		$("#piechart").show();
+		$("#piechart-gender").hide();
 		$("#piechart-location").hide();
 		$("#piechart-age").hide();
 		window.location = '#chart1';//note
