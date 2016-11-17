@@ -56,31 +56,19 @@
 	
 	// [6] Lấy danh sách pạn pè
 	  function showListFriendAPI(response){
-		    var numRows = 0;
 		    var name = new Array();
 		  FB.api(
 			  '/me/taggable_friends',
 			  'GET',
 // 				  {"fields":"friends{id,name}"},
-				{"fields":"name,birthday,gender,id,picture","pretty":"0","limit":"5000"},
+				{"fields":"name,birthday,gender,id,picture.type(large)","pretty":"0","limit":"5000"},
 			  function(response) {
 			     if(!response || response.error){
-			    	 alert ("loidd");
+			    	 alert ("loi");
 			     }else{
 			    	 for (var i in response.data)
 			     	{
-			     		var newRow = $('<tr><td></td><td></td><td></td></tr>');
-			            var img = '<img src="'+response.data[i].picture.data.url+'"/>';
-			     		var cols = newRow.children();
-			            cols.eq(0).text(numRows);
-			            cols.eq(1).text(response.data[i].name);
-//			            cols.eq(2).text(response.data[i].id);
-//			            cols.eq(3).text(response.data[i].gender);
-//			            cols.eq(4).text(response.data[i].birthday);
-			            cols.eq(2).append(img);
-			            
-			            newRow.appendTo('#tableBody');
-			            numRows++;
+			    		 $(".list-container ul").append('<li><img src="'+response.data[i].picture.data.url+'"/><span>'+response.data[i].name+'</span></li>');
 			            //tạo mảng các kí tự bắt đầu của tên
 			            name.push(response.data[i].name.substring(0, 1));
 			     	}
@@ -125,31 +113,31 @@
 //			    var name = new Array();
 			    
 			    for(var i in array){
-	    	    	if(array[i]=='A') A += 1;
-	    	    	if(array[i]=='B') B += 1;
-	    	    	if(array[i]=='C') C += 1;
-	    	    	if(array[i]=='D') D += 1;
-	    	    	if(array[i]=='E') E += 1;
-	    	    	if(array[i]=='F') F += 1;
-	    	    	if(array[i]=='G') G += 1;
-	    	    	if(array[i]=='H') H += 1;
-	    	    	if(array[i]=='I') I += 1;
-	    	    	if(array[i]=='J') J += 1;
-	    	    	if(array[i]=='K') K += 1;
-	    	    	if(array[i]=='L') L += 1;
-	    	    	if(array[i]=='M') M += 1;
-	    	    	if(array[i]=='N') N += 1;
-	    	    	if(array[i]=='O') O += 1;
-	    	    	if(array[i]=='P') P += 1;
-	    	    	if(array[i]=='Q') Q += 1;
-	    	    	if(array[i]=='R') R += 1;
-	    	    	if(array[i]=='S') S += 1;
-	    	    	if(array[i]=='T') T += 1;
-	    	    	if(array[i]=='U') U += 1;
-	    	    	if(array[i]=='W') W += 1;
-	    	    	if(array[i]=='X') X += 1;
-	    	    	if(array[i]=='Y') Y += 1;
-	    	    	if(array[i]=='Z') Z += 1;
+	    	    	if(array[i]=='A') {A += 1;continue;}
+	    	    	if(array[i]=='B') {B += 1;continue;}
+	    	    	if(array[i]=='C') {C += 1;continue;}
+	    	    	if(array[i]=='D') {D += 1;continue;}
+	    	    	if(array[i]=='E') {E += 1;continue;}
+	    	    	if(array[i]=='F') {F += 1;continue;}
+	    	    	if(array[i]=='G') {G += 1;continue;}
+	    	    	if(array[i]=='H') {H += 1;continue;}
+	    	    	if(array[i]=='I') {I += 1;continue;}
+	    	    	if(array[i]=='J') {J += 1;continue;}
+	    	    	if(array[i]=='K') {K += 1;continue;}
+	    	    	if(array[i]=='L') {L += 1;continue;}
+	    	    	if(array[i]=='M') {M += 1;continue;}
+	    	    	if(array[i]=='N') {N += 1;continue;}
+	    	    	if(array[i]=='O') {O += 1;continue;}
+	    	    	if(array[i]=='P') {P += 1;continue;}
+	    	    	if(array[i]=='Q') {Q += 1;continue;}
+	    	    	if(array[i]=='R') {R += 1;continue;}
+	    	    	if(array[i]=='S') {S += 1;continue;}
+	    	    	if(array[i]=='T') {T += 1;continue;}
+	    	    	if(array[i]=='U') {U += 1;continue;}
+	    	    	if(array[i]=='W') {W += 1;continue;}
+	    	    	if(array[i]=='X') {X += 1;continue;}
+	    	    	if(array[i]=='Y') {Y += 1;continue;}
+	    	    	if(array[i]=='Z') {Z += 1;continue;}
 	    	    	
 	    	    }
 			  //chart 
@@ -169,10 +157,12 @@
 		  	          ]);
 
 		  	          var options = {
-		  	            title: title,
+	  	        		title: title,
 		  	            legend: 'left',
-		  	            width:  900,
-		  	            height: 600,
+		  	            is3D: true,
+		  	            width:  800,
+		  	            height: 560,
+		  	            backgroundColor: '#eeff77',
 		  	            pieSliceText: 'label',
 		  	            slices: { 
 		  	            		  0: {offset: 0.5},
@@ -180,10 +170,8 @@
 		  	                      12: {offset: 0.3},
 		  	                      14: {offset: 0.4},
 		  	                      15: {offset: 0.5}
-		  	                      
 		  	            },
 		  	          };
-
 		  	          var chart = new google.visualization.PieChart(document.getElementById(chartid));
 		  	          chart.draw(data, options);
 		  	      }
@@ -194,7 +182,7 @@
 			var female=0;
 			
 			for (var i in array) {
-				if(array[i].toUpperCase()=="Male".toUpperCase()) male+=1;
+				if(array[i].toUpperCase()=="MALE") male+=1;
 				else female+=1;
 			}
 			
@@ -211,8 +199,9 @@
 	  	            title: title,
 	  	            legend: 'left',
 	  	            is3D: true,
-	  	            width:  900,
-	  	            height: 600,
+	  	            width:  800,
+	  	            height: 560,
+	  	            backgroundColor: '#a6cc72',
 	  	            slices: { 
 	  	                      
 	  	            },
@@ -232,14 +221,14 @@
 			  
 			  
 			  for (var i in array) {
-				  if(array[i].trim().toUpperCase().indexOf("HO CHI MINH")!=-1){HCM+=1;}
-				  if(array[i].trim().toUpperCase().indexOf("HOCHIMINH")!=-1){HCM+=1;}
-				  if(array[i].trim().toUpperCase().indexOf("HA NOI")!=-1){HN+=1;}
-				  if(array[i].trim().toUpperCase().indexOf("HANOI")!=-1){HN+=1;}
-				  if(array[i].trim().toUpperCase().indexOf("DA NANG")!=-1){DN+=1;}
-				  if(array[i].trim().toUpperCase().indexOf("DANANG")!=-1){DN+=1;}
-				  if(array[i].trim().toUpperCase().indexOf("CAN THO")!=-1){CT+=1;}
-				  if(array[i].trim().toUpperCase().indexOf("CANTHO")!=-1){CT+=1;}
+				  if(array[i].trim().toUpperCase().indexOf("HO CHI MINH")!=-1){HCM+=1;continue;}
+				  if(array[i].trim().toUpperCase().indexOf("HOCHIMINH")!=-1){HCM+=1;continue;}
+				  if(array[i].trim().toUpperCase().indexOf("HA NOI")!=-1){HN+=1;continue;}
+				  if(array[i].trim().toUpperCase().indexOf("HANOI")!=-1){HN+=1;continue;}
+				  if(array[i].trim().toUpperCase().indexOf("DA NANG")!=-1){DN+=1;continue;}
+				  if(array[i].trim().toUpperCase().indexOf("DANANG")!=-1){DN+=1;continue;}
+				  if(array[i].trim().toUpperCase().indexOf("CAN THO")!=-1){CT+=1;continue;}
+				  if(array[i].trim().toUpperCase().indexOf("CANTHO")!=-1){CT+=1;continue;}
 				  else Other+=1;
 				}
 				
@@ -255,12 +244,12 @@
 		  	          ]);
 
 		  	          var options = {
-		  	            title: title,
+	  	        		title: title,
 		  	            legend: 'left',
 		  	            is3D: true,
-//		  	            pieHole: 0.4,
-		  	            width:  900,
-		  	            height: 600,
+		  	            width:  800,
+		  	            height: 560,
+		  	            backgroundColor: '#a6cc72',
 		  	            pieSliceText: 'percentage',
 		  	            pieSliceTextStyle: {color: "white", fontSize: 16},
 		  	            slices: { 
@@ -285,14 +274,17 @@
 				  var year = Math.abs(date[2] - curyear);
 				  if(year<=25){
 					  younger+=1;
+					  continue;
 				  }
 				  if(year>=26&&year<=35){
 					  young+=1;
+					  continue;
 				  }
 				  if(year>=36&&year<=55){
 					  old+=1;
+					  continue;
 				  }
-				  else older+=1;
+				  else  older+=1;
 				}
 				
 				//chart 
@@ -306,12 +298,12 @@
 		  	          ]);
 
 		  	          var options = {
-		  	            title: title,
+	  	        		title: title,
 		  	            legend: 'left',
 		  	            is3D: true,
-//		  	            pieHole: 0.4,
-		  	            width:  900,
-		  	            height: 600,
+		  	            width:  800,
+		  	            height: 560,
+		  	            backgroundColor: '#a6cc72',
 		  	            pieSliceText: 'percentage',
 		  	            pieSliceTextStyle: {color: "white", fontSize: 16},
 		  	            slices: { 
@@ -620,7 +612,7 @@
 			  FB.api(
 					  '/me/friends',
 					  'GET',
-					  {"fields":"name,gender,birthday,id,location","pretty":"0","limit":"5000"},
+					  {"fields":"name,gender,birthday,location,picture","pretty":"0","limit":"5000"},
 					  function(response) {
 					     if(!response || response.error){
 					    	 alert ("loi");
@@ -629,13 +621,14 @@
 					    	 {
 							// 		JQuery			     		
 									var newRow = $('<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>');
-						            var cols = newRow.children();
+									var img = '<img src="'+response.data[i].picture.data.url+'"/>';
+									var cols = newRow.children();
 						            cols.eq(0).text(numRows);
 						            cols.eq(1).text(response.data[i].name);
-						            cols.eq(2).text(response.data[i].id);
-						            cols.eq(3).text(response.data[i].gender);
-						            cols.eq(4).text(response.data[i].birthday);
-						            cols.eq(5).text(response.data[i].location.name);
+						            cols.eq(2).text(response.data[i].gender);
+						            cols.eq(3).text(response.data[i].birthday);
+						            cols.eq(4).text(response.data[i].location.name);
+						            cols.eq(5).append(img);
 						            newRow.appendTo('#tableBody-all');
 						            numRows++;
 						            

@@ -67,4 +67,11 @@ public class BafController {
 		return model;
 	}
 	
+	@RequestMapping(value="contact")
+	public ModelAndView contact(){
+		
+		ModelAndView model = new ModelAndView("Contact");
+		
+		return model;
+	}
 }

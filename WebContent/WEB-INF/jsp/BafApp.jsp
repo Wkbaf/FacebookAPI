@@ -42,10 +42,10 @@
 		    cookie     : true,   
 		                        
 		    xfbml      : true,  
-		    version    : 'v2.1' 
+		    version    : 'v2.8' 
 		  });
 		  
-// 		   flags = true;
+// 		   flags = true;//Flag Load init success
 		   
 		 // Gọi hàm xử lí trạng thái để kiểm tra trạng thái hiện tại
 		  FB.getLoginStatus(function(response) {
@@ -56,31 +56,31 @@
 		
 		// Check load init
 // 		function loadint(){
-// 			if(flags==false){alert ("sdas");}
+// 			if(flags==false){alert ("not load init");}
 // 		}
 	</script>
 	
 	<!--  CODE PAGE -->
 	
-		<div class="fixed-bg bg-1" ></div>
+		<div class="fixed-bg bg-1" ></div><!-- background homepage -->
 		
-		<div class="fixed-bg bg-1tp"></div>
+		<div class="fixed-bg bg-1tp"></div><!-- background tempt for animate cockpit theme -->
 		
 <!-- 		<div class="fixed-bg-temp"><a name="service"></a></div> -->
 
-	 	<div class="fixed-bg bg-2"><a name="service"></a></div>
+	 	<div class="fixed-bg bg-2"><a name="service"></a></div><!-- background page 2 -->
 	 	
-	 	<div class="fixed-bg bg-3"></div>
+	 	<div class="fixed-bg bg-3"></div><!-- background page 3 -->
 	 	
-	 	<div class="fixed-bg bg-4"></div>
+	 	<div class="fixed-bg bg-4"></div><!-- background 4 -->
 	 	
-	 	<div class="fixed-bg bg-5"></div>
+	 	<div class="fixed-bg bg-5"></div><!-- background 5 -->
 	 	
-	 	<div class="fixed-bg bg-6"></div>
+<!-- 	 	<div class="fixed-bg bg-6"></div> -->
 	 	
-	 	<div class="opacityBG"></div>
+<!-- 	 	<div class="opacityBG"></div> -->
 		
-		<div class="contain-frame">
+		<div class="contain-frame"><!-- contain frame -->
 		
 <!-- img star moon cloud to tranform bg -->
 		<img class="img-star wow bounceInDown" alt="star" src="image/homepage/star.png">
@@ -93,11 +93,11 @@
 	            <div id="wrapper">
 	                 <div class="nav">
 	                     <ul>
-	                         <li class="active"><a href="" id="a1"><span class="glyphicon glyphicon-home"></span ><span class="nav-text">Home</span> </a></li>
+	                         <li class="active"><a href="#" id="a1"><span class="glyphicon glyphicon-home"></span ><span class="nav-text">Home</span> </a></li>
 	                         <li><a href="#service" id="a2"><span class="glyphicon glyphicon-play-circle"></span><span class="nav-text">Service</span></a></li>
 	                         <li><a href="#about" id="a3"><span class="glyphicon glyphicon-th-large"></span><span class="nav-text">About us</span></a></li>
-	                         <li><a href="#" id="a4"><span class="glyphicon glyphicon-book"></span><span class="nav-text">Contact us</span></a></li>
-<!-- 	                         <li><a href="#" class="fb" id="btb" onclick="RequestLoginFB()" style="display:none"><img alt="facebookimg" src="image/fb.png"></a></li> -->
+	                         <li><a href="#contact" id="a4"><span class="glyphicon glyphicon-book"></span><span class="nav-text">Contact us</span></a></li>
+	                         <li><a href="#" class="fb" id="btb" onclick="RequestLoginFB()" >Đăng nhập</a></li>
 	                     </ul>
 	                 </div>  
 	            </div>
@@ -130,12 +130,12 @@
 					<div class="content-bg2 child">
 					
 						<div class="content-bg2 child circle">
-							<a href="listfriend.html" onclick="return CheckLog()">
+							<a href="friend.html" onclick="return CheckLog()">
 								<img class="img" id="img1" alt="icon-friend" src="image/icon-b3.png">
 							</a>
 						</div>
 						
-						<h1><a href="listfriend.html">Friends</a></h1>
+						<h1><a href="friend.html">Friends</a></h1>
 						
 						<h4>
 							<b>Friendship</b> is not a big thing ...
@@ -147,12 +147,12 @@
 					<div class="content-bg2 child">
 					
 						<div class="content-bg2 child circle">
-							<a href="listfriend.html?1" onclick="return CheckLog()">
+							<a href="friend.html?1" onclick="return CheckLog()">
 								<img class="img" id="img2"  alt="icon-friend" src="image/icon-abcb.png">
 							</a>
 						</div>
 						
-						<h1><a href="listfriend.html?1">Letters</a></h1>
+						<h1><a href="friend.html?1">Letters</a></h1>
 						
 						<h4>
 							Don't live up to your stereotypes
@@ -164,12 +164,12 @@
 					<div class="content-bg2 child">
 					
 						<div class="content-bg2 child circle">
-							<a id="link-location" href="listfriend.html?0" onclick="return CheckLog()">
+							<a id="link-location" href="friend.html?0" onclick="return CheckLog()">
 								<img class="img" id="img3"  alt="icon-friend" src="image/icon-globeb.png">
 							</a>
 						</div>
 						
-						<h1><a href="listfriend.html?0">Geography</a></h1>
+						<h1><a href="friend.html?0">Geography</a></h1>
 						
 						<h4>
 							One's destination is never a place, but a new way of seeing things
@@ -184,23 +184,16 @@
 			</div>
 			
 			<div class="contain-bg4">
-				<h1>sdfdsf</h1>
-			</div>
-			
-			<div class="contain-bg5">
-				<h1>BapApp</h1>
-			</div>
-			
-			<div class="contain-footer">
+				<a name="about"></a><!-- link about in site -->
 				<h1>ABOUT</h1>
-				
-				<div class="content-footer">
-					<a href="policy.html">Policy</a>
-					<a href="service.html">Service</a>
-				</div>
 			</div>
-		</div>
-		
+			
+			<!-- include contact form -->
+			<div class="contain-bg5">
+				<a name="contact"></a><!-- link contact in site -->
+				<h1>CONTACT</h1>
+			</div>
+			
 		<!-- Popup -->
 		<div id="background-pop">
 			<div class="popup">
@@ -213,12 +206,18 @@
 		
 		
 		
-		<div class="goHome"><span class="glyphicon glyphicon-home"></span ></div>
-	    <p id="lbl" style="display:none">BẠN ĐÃ ĐĂNG NHẬP THÀNH CÔNG!</p>
-	    <p id="lbl2" style="display:none"></p><br>
+<!-- 		<div class="goHome"><span class="glyphicon glyphicon-home"></span ></div> -->
+<!-- 	    <p id="lbl" style="display:none">BẠN ĐÃ ĐĂNG NHẬP THÀNH CÔNG!</p> -->
+<!-- 	    <p id="lbl2" style="display:none"></p><br> -->
 	    
 	    
 <!-- 	    <button onclick="loadint()">Load init ?</button> -->
-    
+    	</div>
 </body>
+<footer>
+	<pre>
+		Phone: 0964124330
+		Mail: <a href="mailto:tuanb1304632@student.ctu.edu.vn">tuanb1304632@student.ctu.edu.vn</a>
+	</pre>
+</footer> 
 </html>
